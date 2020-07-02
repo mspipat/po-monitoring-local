@@ -22,39 +22,38 @@
 	<div class="container-fluid mt-3">
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="card" style="height: 150px;">
+				<div class="card">
 					<h2 class="card-title text-center font-weight-bold mt-2"> PO Monitoring</h2>
-					<div class="card-body col-lg-12 row">
-						<!-- UPLOAD PO FILE -->
-			                <div class="col-lg-3">
-			                	<form action="" method="post" enctype="multipart/form-data" class="md-form">
-			                  		<div class="input-group">
-			                    		<div class="custom-file" style="margin-left: 14px;">
-			                    			<input type="hidden" name="" id="working-po">
-			                        		<input type="file" class="custom-file-input " id="po_file" name="file" accept=".csv" aria-describedby="inputGroupFileAddon01" >
-			                       			 <label class="custom-file-label" style="color: black;" for="inputGroupFile01">Choose file</label>
-			                    		</div>
-			                  		</div>
-			                	</form>
-			                </div>
-			        	<!-- /UPLOAD PO FILE -->
-			        	<!-- UPDATE PO -->
-			        		<div class="col-lg-9" style="margin-top: 30px;">
-			        			<button class="btn btn-success btn-sm" id="btnUpdate">Update</button>
-			        			<a  class="btn btn-danger btn-sm"  href="convertcsv.php" id="btnExcel">Export Excel</a>
-			        			<a  class="btn btn-danger btn-sm" href="template.csv" download>Download Template</a>
-			        			<!-- <button class="btn btn-danger btn-sm" id="btnTemplate">Download Template</button> -->
-			        		</div>
-			        		<div class="col-lg-12" style="margin-top: 50px;">
-								<div class="custom-control custom-checkbox" style="margin-top: -45px;">
-    								<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-    								<label class="custom-control-label" for="defaultUnchecked" style="font-size: 0.9rem;">Remaining Balance</label>
-								</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-lg-3">
+								<!-- UPLOAD PO FILE -->
+								<form action="" method="post" enctype="multipart/form-data" class="md-form">
+			            <div class="input-group">
+			              <div class="custom-file" style="margin-left: 14px;">
+			                <input type="hidden" name="" id="working-po">
+			                <input type="file" class="custom-file-input " id="po_file" name="file" accept=".csv" aria-describedby="inputGroupFileAddon01" >
+			                <label class="custom-file-label" style="color: black;" for="inputGroupFile01">Choose file</label>
+			              </div>
+			            </div>
+			          </form>
+								<!-- /UPLOAD PO FILE -->
 							</div>
-			        	<!-- END UPDATE PO  -->
-			        		<div class="col-lg-3" style="margin-top: 30px;">
-			        		</div>
-			        </div>
+							<div class="col-lg-9" style="margin-top: 30px;">
+								<!-- UPDATE PO -->
+								<button class="btn btn-success btn-sm" id="btnUpdate">Update</button>
+			        	<a  class="btn btn-danger btn-sm"  href="convertcsv.php" id="btnExcel">Export Excel</a>
+			        	<a  class="btn btn-danger btn-sm" href="template.csv" download>Download Template</a>
+								<!-- /UPDATE PO -->	
+							</div>
+						</div>
+						<div class="row">
+							<div class="custom-control custom-checkbox">
+    						<input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+    						<label class="custom-control-label" for="defaultUnchecked" style="font-size: 0.9rem;">Remaining Balance</label>
+							</div>
+						</div>
+			    </div>
 				</div>
 				<!-- LOADING LOADER -->
 						<div id="loading" class="overlay">
@@ -65,8 +64,7 @@
 				<!-- /LOADING LOADER -->
 			</div>
 		</div>
-		<!-- <br>
- -->		<div class="row mt-5">
+	<div class="row mt-5">
 			<div class="col-lg-12">
 				<!-- <div class="card" style="margin: 20px;"> -->
 					<table id="tablePORec" class="table table-bordered table-sm text-center table-striped">
